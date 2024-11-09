@@ -1,4 +1,3 @@
-
 const crypto = require('crypto');
 
 class Helpers {
@@ -20,10 +19,6 @@ class Helpers {
         const secondMessage = `${apiSecret}${conversationId}${nonce}${securityData}`;
         const signature = this.generate(secondMessage, apiSecret);
         return signature;
-    }
-
-    static getClientIpAddress() {
-        return '127.0.0.1';
     }
 }
 
